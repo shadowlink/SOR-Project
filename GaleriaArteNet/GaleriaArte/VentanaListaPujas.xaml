@@ -1,0 +1,24 @@
+﻿<Window x:Class="GaleriaArte.VentanaListaPujas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Listado de Pujas" Height="439" Width="439">
+    <Grid>
+        <ListView x:Name="lvPujas" HorizontalAlignment="Left" Height="388" Margin="10,10,0,0" VerticalAlignment="Top" Width="411">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn x:Name="colIdVenta" Header="Id Venta" HeaderStringFormat="Id Venta" Width="80"/>
+                    <GridViewColumn x:Name="colIdPujador" Header="Id Pujador" HeaderStringFormat="Id Pujador" Width="80"/>
+                    <GridViewColumn x:Name="colPuja" Header="Precio de la puja" HeaderStringFormat="Precio de la puja" Width="120"/>
+                    <GridViewColumn x:Name="colVender" Header="Vender" HeaderStringFormat="Vender" Width="80">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button x:Name="btnVender" Content="Vender" Margin="0" VerticalAlignment="Center" Click="btnVender_Click" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+    </Grid>
+</Window>

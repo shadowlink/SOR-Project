@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword />
+    <_PublishTargetUrl>C:\inetpub\wwwroot</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Apache.NMS.ActiveMQ.dll">
+      <publishTime>11/19/2014 14:21:41</publishTime>
+    </File>
+    <File Include="bin/Apache.NMS.ActiveMQ.pdb">
+      <publishTime>11/19/2014 14:21:41</publishTime>
+    </File>
+    <File Include="bin/Apache.NMS.ActiveMQ.xml">
+      <publishTime>11/19/2014 14:21:41</publishTime>
+    </File>
+    <File Include="bin/Apache.NMS.dll">
+      <publishTime>11/19/2014 14:21:41</publishTime>
+    </File>
+    <File Include="bin/Apache.NMS.pdb">
+      <publishTime>11/19/2014 14:21:41</publishTime>
+    </File>
+    <File Include="bin/Gestor Pujas.exe">
+      <publishTime>05/26/2015 13:30:55</publishTime>
+    </File>
+    <File Include="bin/Gestor Pujas.pdb">
+      <publishTime>05/26/2015 13:30:55</publishTime>
+    </File>
+    <File Include="bin/gestor.dll">
+      <publishTime>05/26/2015 17:34:25</publishTime>
+    </File>
+    <File Include="bin/gestor.pdb">
+      <publishTime>05/26/2015 17:34:25</publishTime>
+    </File>
+    <File Include="bin/MySql.Data.dll">
+      <publishTime>08/20/2007 23:17:54</publishTime>
+    </File>
+    <File Include="Clases/HistoricoVentas.cs">
+      <publishTime>11/17/2014 17:04:14</publishTime>
+    </File>
+    <File Include="Clases/Puja.cs">
+      <publishTime>04/28/2015 13:06:32</publishTime>
+    </File>
+    <File Include="Clases/TopicPublisher.cs">
+      <publishTime>11/29/2014 15:40:58</publishTime>
+    </File>
+    <File Include="Clases/Usuario.cs">
+      <publishTime>05/19/2015 16:11:23</publishTime>
+    </File>
+    <File Include="Clases/Venta.cs">
+      <publishTime>04/28/2015 13:29:43</publishTime>
+    </File>
+    <File Include="ClassDiagram1.cd">
+      <publishTime>05/26/2015 16:10:17</publishTime>
+    </File>
+    <File Include="gestor.csproj">
+      <publishTime>05/26/2015 16:11:10</publishTime>
+    </File>
+    <File Include="gestor.csproj.user">
+      <publishTime>05/26/2015 16:11:10</publishTime>
+    </File>
+    <File Include="Historico.asmx">
+      <publishTime>11/17/2014 17:10:27</publishTime>
+    </File>
+    <File Include="Historico.asmx.cs">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="MySql.Data.dll">
+      <publishTime>08/20/2007 23:17:54</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>11/19/2014 14:21:42</publishTime>
+    </File>
+    <File Include="Properties/AssemblyInfo.cs">
+      <publishTime>10/11/2014 22:21:58</publishTime>
+    </File>
+    <File Include="Properties/PublishProfiles/Gestor.pubxml">
+      <publishTime>05/07/2015 17:00:44</publishTime>
+    </File>
+    <File Include="Properties/PublishProfiles/Gestor.pubxml.user">
+      <publishTime>05/26/2015 13:30:56</publishTime>
+    </File>
+    <File Include="Usuarios.asmx">
+      <publishTime>10/11/2014 22:24:45</publishTime>
+    </File>
+    <File Include="Usuarios.asmx.cs">
+      <publishTime>05/19/2015 18:37:23</publishTime>
+    </File>
+    <File Include="Ventas.asmx">
+      <publishTime>11/11/2014 15:59:20</publishTime>
+    </File>
+    <File Include="Ventas.asmx.cs">
+      <publishTime>05/26/2015 17:33:30</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>11/14/2014 15:34:54</publishTime>
+    </File>
+    <File Include="Web.Debug.config">
+      <publishTime>10/11/2014 22:22:00</publishTime>
+    </File>
+    <File Include="Web.Release.config">
+      <publishTime>10/11/2014 22:22:01</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

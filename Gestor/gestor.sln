@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gestor", "gestor\gestor.csproj", "{C79AA435-5150-4DE4-B5A7-D80F8FB1833A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gestor Pujas", "Gestor Pujas\Gestor Pujas.csproj", "{2D3E3096-A2B0-4CF1-90D0-BD3036303B4E}"
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "ModelingProject2", "ModelingProject2\ModelingProject2.modelproj", "{A0F7EB0A-6F1B-438D-8E96-75AC37404AD3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C79AA435-5150-4DE4-B5A7-D80F8FB1833A}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{C79AA435-5150-4DE4-B5A7-D80F8FB1833A}.Debug|Any CPU.Build.0 = Debug|x86
+		{C79AA435-5150-4DE4-B5A7-D80F8FB1833A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C79AA435-5150-4DE4-B5A7-D80F8FB1833A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D3E3096-A2B0-4CF1-90D0-BD3036303B4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D3E3096-A2B0-4CF1-90D0-BD3036303B4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D3E3096-A2B0-4CF1-90D0-BD3036303B4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D3E3096-A2B0-4CF1-90D0-BD3036303B4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0F7EB0A-6F1B-438D-8E96-75AC37404AD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0F7EB0A-6F1B-438D-8E96-75AC37404AD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0F7EB0A-6F1B-438D-8E96-75AC37404AD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0F7EB0A-6F1B-438D-8E96-75AC37404AD3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

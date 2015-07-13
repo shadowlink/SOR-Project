@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:56660/Ventas.asmx" uri="xml-resources/web-service-references/Ventas/wsdl/localhost_56660/Ventas.asmx"/>
+    <system systemId="http://localhost:8080/juddiv3/services/inquiry?wsdl" uri="xml-resources/web-service-references/inquiry_1/wsdl/localhost_8080/juddiv3/services/inquiry.wsdl"/>
+    <system systemId="http://localhost:56660/Usuarios.asmx?wsdl" uri="xml-resources/web-service-references/Usuarios/wsdl/localhost_56660/Usuarios.asmx.wsdl"/>
+    <system systemId="http://localhost:56660/Ventas.asmx?wsdl" uri="xml-resources/web-service-references/Ventas/wsdl/localhost_56660/Ventas.asmx.wsdl"/>
+    <system systemId="http://localhost:56660/Historico.asmx?wsdl" uri="xml-resources/web-service-references/Historico/wsdl/localhost_56660/Historico.asmx.wsdl"/>
+    <system systemId="http://localhost:6543/Ventas.asmx?wsdl" uri="xml-resources/web-service-references/Ventas_1/wsdl/localhost_6543/Ventas.asmx.wsdl"/>
+</catalog>

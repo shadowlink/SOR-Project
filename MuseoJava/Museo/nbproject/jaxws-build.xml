@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        *** GENERATED FROM jax-ws.xml - DO NOT EDIT !                             ***
+        *** TO MODIFY wsimport options USE Web Service node -> Edit WS Attributes ***
+        *** TO CHANGE TARGETS GENERATED TO jaxws-build.xml COPY THOSE             ***
+        *** TARGETS TO ../build.xml AND MODIFY THAT FILE INSTEAD                  ***
+
+        --><project xmlns:xalan="http://xml.apache.org/xslt" xmlns:j2seproject3="http://www.netbeans.org/ns/j2se-project/3" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+    <!--
+                ===================
+                JAX-WS WSIMPORT SECTION
+                ===================
+            -->
+    <target name="wsimport-init" depends="init">
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${libs.jaxws21.classpath}"/>
+        </taskdef>
+    </target>
+    <target name="wsimport-client-Usuarios" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/Usuarios"/>
+        <property name="wsdl-Usuarios" location="xml-resources/web-service-references/Usuarios/wsdl/localhost_56660/Usuarios.asmx.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Usuarios" destdir="${build.generated.dir}/jax-wsCache/Usuarios" wsdl="${wsdl-Usuarios}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:56660/Usuarios.asmx?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-Usuarios}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/Usuarios"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/Usuarios">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-Usuarios" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/Usuarios"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/org/tempuri"/>
+    </target>
+    <target name="wsimport-client-Ventas" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/Ventas"/>
+        <property name="wsdl-Ventas" location="xml-resources/web-service-references/Ventas/wsdl/localhost_6543/Ventas.asmx.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Ventas" destdir="${build.generated.dir}/jax-wsCache/Ventas" wsdl="${wsdl-Ventas}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:56660/Ventas.asmx?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-Ventas}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/Ventas"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/Ventas">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-Ventas" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/Ventas"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/org/tempuri"/>
+    </target>
+    <target name="wsimport-client-Historico" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/Historico"/>
+        <property name="wsdl-Historico" location="xml-resources/web-service-references/Historico/wsdl/localhost_56660/Historico.asmx.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Historico" destdir="${build.generated.dir}/jax-wsCache/Historico" wsdl="${wsdl-Historico}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:56660/Historico.asmx?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-Historico}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/Historico"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/Historico">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-Historico" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/Historico"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/org/tempuri"/>
+    </target>
+    <target name="wsimport-client-Ventas_1" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/Ventas_1"/>
+        <property name="wsdl-Ventas_1" location="xml-resources/web-service-references/Ventas_1/wsdl/localhost_6543/Ventas.asmx.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Ventas_1" destdir="${build.generated.dir}/jax-wsCache/Ventas_1" wsdl="${wsdl-Ventas_1}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:56660/Ventas.asmx?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-Ventas_1}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/Ventas_1"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/Ventas_1">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-Ventas_1" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/Ventas_1"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/org/tempuri"/>
+    </target>
+    <target name="wsimport-client-Usuarios_1" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/Usuarios_1"/>
+        <property name="wsdl-Usuarios_1" location="xml-resources/web-service-references/Usuarios_1/wsdl/localhost_6543/Usuarios.asmx.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Usuarios_1" destdir="${build.generated.dir}/jax-wsCache/Usuarios_1" wsdl="${wsdl-Usuarios_1}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:56660/Usuarios.asmx?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-Usuarios_1}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/Usuarios_1"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/Usuarios_1">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-Usuarios_1" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/Usuarios_1"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/org/tempuri"/>
+    </target>
+    <target name="wsimport-client-Historico_1" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/Historico_1"/>
+        <property name="wsdl-Historico_1" location="xml-resources/web-service-references/Historico_1/wsdl/localhost_56660/Historico.asmx.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Historico_1" destdir="${build.generated.dir}/jax-wsCache/Historico_1" wsdl="${wsdl-Historico_1}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:56660/Historico.asmx?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-Historico_1}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/Historico_1"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/Historico_1">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-Historico_1" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/Historico_1"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/org/tempuri"/>
+    </target>
+    <target name="wsimport-client-inquiry" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/inquiry"/>
+        <property name="wsdl-inquiry" location="xml-resources/web-service-references/inquiry/wsdl/localhost_8080/juddiv3/services/inquiry.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/inquiry" destdir="${build.generated.dir}/jax-wsCache/inquiry" wsdl="${wsdl-inquiry}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/juddiv3/services/inquiry?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-inquiry}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/inquiry"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/inquiry">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-inquiry" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/inquiry"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/uddi-org:v3_service"/>
+    </target>
+    <target name="wsimport-client-inquiry_1" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/inquiry_1"/>
+        <property name="wsdl-inquiry_1" location="xml-resources/web-service-references/inquiry_1/wsdl/localhost_8080/juddiv3/services/inquiry.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/inquiry_1" destdir="${build.generated.dir}/jax-wsCache/inquiry_1" wsdl="${wsdl-inquiry_1}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/juddiv3/services/inquiry?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-inquiry_1}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/inquiry_1"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/inquiry_1">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-inquiry_1" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/inquiry_1"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/uddi-org:v3_service"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-Usuarios, wsimport-client-Ventas, wsimport-client-Historico, wsimport-client-Ventas_1, wsimport-client-Usuarios_1, wsimport-client-Historico_1, wsimport-client-inquiry, wsimport-client-inquiry_1"/>
+</project>

@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="GaleriaArte.Perfil"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Width="899" Height="430" Background="White">
+    <Grid>
+        <Label Content="Perfil" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="22"/>
+        <Label Content="Nombre:&#xD;&#xA;" HorizontalAlignment="Left" Margin="18,97,0,0" VerticalAlignment="Top" Height="30" Width="93"/>
+        <Label Content="e-Mail:&#xA;" HorizontalAlignment="Left" Margin="18,127,0,0" VerticalAlignment="Top" Height="30" Width="93"/>
+        <Label Content="Cambiar password&#xA;" HorizontalAlignment="Left" Margin="376,58,0,0" VerticalAlignment="Top" Height="30" Width="133" FontWeight="Bold" FontSize="14"/>
+        <Label Content="Nuevo password 1:&#xA;" HorizontalAlignment="Left" Margin="381,95,0,0" VerticalAlignment="Top" Height="30" Width="110"/>
+        <Label Content="Nuevo password 2:&#xA;" HorizontalAlignment="Left" Margin="381,123,0,0" VerticalAlignment="Top" Height="30" Width="115"/>
+        <TextBox x:Name="tbNombre" HorizontalAlignment="Left" Height="23" Margin="85,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="231"/>
+        <TextBox x:Name="tbMail" HorizontalAlignment="Left" Height="23" Margin="85,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="231"/>
+        <Label Content="Datos&#xD;&#xA;&#xA;" HorizontalAlignment="Left" Margin="18,58,0,0" VerticalAlignment="Top" Height="30" Width="133" FontWeight="Bold" FontSize="14"/>
+        <Button x:Name="btConfirm" Content="Confirmar" HorizontalAlignment="Left" Margin="18,222,0,0" VerticalAlignment="Top" Width="93" Click="btConfirm_Click"/>
+        <PasswordBox x:Name="tbPass1" HorizontalAlignment="Left" Margin="496,101,0,0" VerticalAlignment="Top" Width="175"/>
+        <PasswordBox x:Name="tbPass2" HorizontalAlignment="Left" Margin="496,127,0,0" VerticalAlignment="Top" Width="175"/>
+        <Label x:Name="lbMessage" Content="" HorizontalAlignment="Left" Margin="18,178,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.932,-0.919"/>
+
+    </Grid>
+</UserControl>

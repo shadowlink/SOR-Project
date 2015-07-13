@@ -1,0 +1,76 @@
+﻿<UserControl x:Class="GaleriaArte.NuevaVenta"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Width="899" Height="430">
+    <Grid Background="White">
+        <Label Content="Año" HorizontalAlignment="Left" Margin="70,180,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbTipo" HorizontalAlignment="Left" Height="23" Margin="203,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbAutor" HorizontalAlignment="Left" Height="23" Margin="203,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbAño" HorizontalAlignment="Left" Height="23" Margin="203,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbEstado" HorizontalAlignment="Left" Height="23" Margin="203,213,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbPrecio" HorizontalAlignment="Left" Height="23" Margin="203,277,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="49"/>
+        <Label Content="Estado" HorizontalAlignment="Left" Margin="70,209,0,0" VerticalAlignment="Top"/>
+        <Label Content="Autor" HorizontalAlignment="Left" Margin="70,152,0,0" VerticalAlignment="Top"/>
+        <Label Content="Tipo" HorizontalAlignment="Left" Margin="70,119,0,0" VerticalAlignment="Top"/>
+        <Label Content="Precio" HorizontalAlignment="Left" Margin="72,277,0,0" VerticalAlignment="Top"/>
+        <Label Content="Nueva venta" HorizontalAlignment="Left" Margin="124,54,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="btnAñadirVenta" Content="Añadir" HorizontalAlignment="Left" Margin="77,364,0,0" VerticalAlignment="Top" Width="75" BorderThickness="0" Height="25" Background="#FFEAEAEA" Click="btnAñadirVenta_Click"/>
+        <Separator HorizontalAlignment="Left" Height="100" Margin="269,172,0,0" VerticalAlignment="Top" Width="328" RenderTransformOrigin="0.5,0.5">
+            <Separator.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90.061"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Separator.RenderTransform>
+        </Separator>
+        <Label Content="Ventas en curso" HorizontalAlignment="Left" Margin="581,54,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.032,1.329" FontSize="20" FontWeight="Bold"/>
+        <ListView x:Name="lstVentas" HorizontalAlignment="Left" Height="233" Margin="445,121,0,0" VerticalAlignment="Top" Width="444">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn x:Name="colId" Header="id" HeaderStringFormat="id" Width="50"/>
+                    <GridViewColumn x:Name="colNegociado" Header="N" HeaderStringFormat="N" Width="20"/>
+                    <GridViewColumn x:Name="colTipo" Header="Tipo" HeaderStringFormat="Tipo" Width="50"/>
+                    <GridViewColumn x:Name="colTiempo" Header="Finaliza" HeaderStringFormat="T. (min)" Width="120"/>
+                    <GridViewColumn x:Name="colPujaMax" Header="Puja Max. " HeaderStringFormat="Puja Max. " Width="60"/>
+                    <GridViewColumn x:Name="colVender" Header="V" HeaderStringFormat="Vender" Width="30">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button x:Name="btnVender" Content="V" Margin="0" VerticalAlignment="Center" Click="btnVender_Click" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn x:Name="colCancelar" Header="C" HeaderStringFormat="Cancelar" Width="30">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button x:Name="btnCancelar" Content="C" Margin="0" VerticalAlignment="Center" Click="btnCancelar_Click" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn x:Name="colEditar" Header="E" HeaderStringFormat="Editar" Width="30">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button x:Name="btnEditar" Content="E" Margin="0" VerticalAlignment="Center" Click="btnEditar_Click" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <DatePicker x:Name="datePicker" HorizontalAlignment="Left" Margin="203,245,0,0" VerticalAlignment="Top" Width="120" FirstDayOfWeek="Monday"/>
+        <Label Content="Fecha fin.               " HorizontalAlignment="Left" Margin="70,246,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbMinutos" HorizontalAlignment="Left" Height="23" Margin="373,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.56,0.478" Text="MM"/>
+        <TextBox x:Name="tbHora" HorizontalAlignment="Left" Height="23" Margin="328,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" Text="HH"/>
+        <Label Content="€" HorizontalAlignment="Left" Margin="257,277,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbMessage" Content="" HorizontalAlignment="Left" Margin="77,333,0,0" VerticalAlignment="Top" Width="338"/>
+        <Label Content="Negociado" HorizontalAlignment="Left" Margin="72,308,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.265,0.577"/>
+        <ComboBox x:Name="cbNegociado" HorizontalAlignment="Left" Margin="203,308,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem IsSelected="True">Automático</ComboBoxItem>
+            <ComboBoxItem>Manual</ComboBoxItem>
+        </ComboBox>
+    </Grid>
+</UserControl>

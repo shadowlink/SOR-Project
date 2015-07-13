@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="nuevaVenta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ventaJson" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="nuevaVentaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="getVentas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idUsuario" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getVentasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getVentasResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getVentasActivas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getVentasActivasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getVentasActivasResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getVentasEspera">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getVentasEsperaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getVentasEsperaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPujasVenta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idVenta" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPujasVentaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getPujasVentaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="editarVenta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="newDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="editarVentaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="finalizarVenta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ventaId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="motiv" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idComprador" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="finalizarVentaResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="nuevaVentaSoapIn">
+    <wsdl:part name="parameters" element="tns:nuevaVenta" />
+  </wsdl:message>
+  <wsdl:message name="nuevaVentaSoapOut">
+    <wsdl:part name="parameters" element="tns:nuevaVentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="getVentasSoapIn">
+    <wsdl:part name="parameters" element="tns:getVentas" />
+  </wsdl:message>
+  <wsdl:message name="getVentasSoapOut">
+    <wsdl:part name="parameters" element="tns:getVentasResponse" />
+  </wsdl:message>
+  <wsdl:message name="getVentasActivasSoapIn">
+    <wsdl:part name="parameters" element="tns:getVentasActivas" />
+  </wsdl:message>
+  <wsdl:message name="getVentasActivasSoapOut">
+    <wsdl:part name="parameters" element="tns:getVentasActivasResponse" />
+  </wsdl:message>
+  <wsdl:message name="getVentasEsperaSoapIn">
+    <wsdl:part name="parameters" element="tns:getVentasEspera" />
+  </wsdl:message>
+  <wsdl:message name="getVentasEsperaSoapOut">
+    <wsdl:part name="parameters" element="tns:getVentasEsperaResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPujasVentaSoapIn">
+    <wsdl:part name="parameters" element="tns:getPujasVenta" />
+  </wsdl:message>
+  <wsdl:message name="getPujasVentaSoapOut">
+    <wsdl:part name="parameters" element="tns:getPujasVentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="editarVentaSoapIn">
+    <wsdl:part name="parameters" element="tns:editarVenta" />
+  </wsdl:message>
+  <wsdl:message name="editarVentaSoapOut">
+    <wsdl:part name="parameters" element="tns:editarVentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="finalizarVentaSoapIn">
+    <wsdl:part name="parameters" element="tns:finalizarVenta" />
+  </wsdl:message>
+  <wsdl:message name="finalizarVentaSoapOut">
+    <wsdl:part name="parameters" element="tns:finalizarVentaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="VentasSoap">
+    <wsdl:operation name="nuevaVenta">
+      <wsdl:input message="tns:nuevaVentaSoapIn" />
+      <wsdl:output message="tns:nuevaVentaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getVentas">
+      <wsdl:input message="tns:getVentasSoapIn" />
+      <wsdl:output message="tns:getVentasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getVentasActivas">
+      <wsdl:input message="tns:getVentasActivasSoapIn" />
+      <wsdl:output message="tns:getVentasActivasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getVentasEspera">
+      <wsdl:input message="tns:getVentasEsperaSoapIn" />
+      <wsdl:output message="tns:getVentasEsperaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getPujasVenta">
+      <wsdl:input message="tns:getPujasVentaSoapIn" />
+      <wsdl:output message="tns:getPujasVentaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="editarVenta">
+      <wsdl:input message="tns:editarVentaSoapIn" />
+      <wsdl:output message="tns:editarVentaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="finalizarVenta">
+      <wsdl:input message="tns:finalizarVentaSoapIn" />
+      <wsdl:output message="tns:finalizarVentaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="VentasSoap" type="tns:VentasSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="nuevaVenta">
+      <soap:operation soapAction="http://tempuri.org/nuevaVenta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getVentas">
+      <soap:operation soapAction="http://tempuri.org/getVentas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getVentasActivas">
+      <soap:operation soapAction="http://tempuri.org/getVentasActivas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getVentasEspera">
+      <soap:operation soapAction="http://tempuri.org/getVentasEspera" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPujasVenta">
+      <soap:operation soapAction="http://tempuri.org/getPujasVenta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editarVenta">
+      <soap:operation soapAction="http://tempuri.org/editarVenta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="finalizarVenta">
+      <soap:operation soapAction="http://tempuri.org/finalizarVenta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="VentasSoap12" type="tns:VentasSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="nuevaVenta">
+      <soap12:operation soapAction="http://tempuri.org/nuevaVenta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getVentas">
+      <soap12:operation soapAction="http://tempuri.org/getVentas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getVentasActivas">
+      <soap12:operation soapAction="http://tempuri.org/getVentasActivas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getVentasEspera">
+      <soap12:operation soapAction="http://tempuri.org/getVentasEspera" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPujasVenta">
+      <soap12:operation soapAction="http://tempuri.org/getPujasVenta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editarVenta">
+      <soap12:operation soapAction="http://tempuri.org/editarVenta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="finalizarVenta">
+      <soap12:operation soapAction="http://tempuri.org/finalizarVenta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Ventas">
+    <wsdl:port name="VentasSoap" binding="tns:VentasSoap">
+      <soap:address location="http://localhost:6543/Ventas.asmx" />
+    </wsdl:port>
+    <wsdl:port name="VentasSoap12" binding="tns:VentasSoap12">
+      <soap12:address location="http://localhost:6543/Ventas.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

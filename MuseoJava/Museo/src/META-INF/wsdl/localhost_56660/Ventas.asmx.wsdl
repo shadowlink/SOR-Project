@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="nuevaVenta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ventaJson" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="nuevaVentaResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="nuevaVentaSoapIn">
+    <wsdl:part name="parameters" element="tns:nuevaVenta" />
+  </wsdl:message>
+  <wsdl:message name="nuevaVentaSoapOut">
+    <wsdl:part name="parameters" element="tns:nuevaVentaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="VentasSoap">
+    <wsdl:operation name="nuevaVenta">
+      <wsdl:input message="tns:nuevaVentaSoapIn" />
+      <wsdl:output message="tns:nuevaVentaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="VentasSoap" type="tns:VentasSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="nuevaVenta">
+      <soap:operation soapAction="http://tempuri.org/nuevaVenta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="VentasSoap12" type="tns:VentasSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="nuevaVenta">
+      <soap12:operation soapAction="http://tempuri.org/nuevaVenta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Ventas">
+    <wsdl:port name="VentasSoap" binding="tns:VentasSoap">
+      <soap:address location="http://localhost:56660/Ventas.asmx" />
+    </wsdl:port>
+    <wsdl:port name="VentasSoap12" binding="tns:VentasSoap12">
+      <soap12:address location="http://localhost:56660/Ventas.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
